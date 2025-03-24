@@ -1,0 +1,16 @@
+{
+  "name": "Test User",
+  "email": "test001@email.com",
+  "password": "TestPassword123",
+  "day": "10",
+  "month": "May",
+  "year": "1995",
+  "firstName": "Test",
+  "lastName": "User",
+  "address": "123 Street",
+  "country": "United States",
+  "state": "California",
+  "city": "Los Angeles",
+  "zipcode": "90001",
+  "phone": "1234567890"
+}

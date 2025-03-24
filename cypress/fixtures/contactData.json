@@ -1,0 +1,7 @@
+{
+  "name": "John Wick",
+  "email": "john@email.com",
+  "subject": "Test Subject",
+  "message": "This is a test message.",
+  "filePath": "cypress/files/test-file.txt"
+}

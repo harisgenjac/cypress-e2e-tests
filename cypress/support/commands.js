@@ -1,0 +1,35 @@
+Cypress.Commands.add('registerUser', (user) => {
+    cy.visit('https://www.automationexercise.com/')
+    cy.get('a[href="/login"]').click()
+    cy.get('input[name="name"]').type(user.name)
+    cy.get('input[data-qa="signup-email"]').type(user.email)
+    cy.get('button[data-qa="signup-button"]').click()
+    cy.get('body').then(($body) => {
+        if (!$body.text().includes('Enter Account Information')) {
+            return
+        }
+        cy.get('#id_gender1').click()
+        cy.get('#password').type(user.password)
+        cy.get('#days').select(user.day)
+        cy.get('#months').select(user.month)
+        cy.get('#years').select(user.year)
+        cy.get('#newsletter').check()
+        cy.get('#optin').check()
+        cy.get('#first_name').type(user.firstName)
+        cy.get('#last_name').type(user.lastName)
+        cy.get('#address1').type(user.address)
+        cy.get('#country').select(user.country)
+        cy.get('#state').type(user.state)
+        cy.get('#city').type(user.city)
+        cy.get('#zipcode').type(user.zipcode)
+        cy.get('#mobile_number').type(user.phone)
+        cy.get('button[data-qa="create-account"]').click()
+    })
+})
+Cypress.Commands.add('login', (email, password) => {
+    cy.visit('https://www.automationexercise.com/')
+    cy.get('a[href="/login"]').click()
+    cy.get('input[data-qa="login-email"]').type(email)
+    cy.get('input[data-qa="login-password"]').type(password, { log: false })
+    cy.get('button[data-qa="login-button"]').click()
+})
