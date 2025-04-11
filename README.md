@@ -1,44 +1,42 @@
-Cypress E2E Tests
+# Cypress E2E Tests
 
 Automated end-to-end testing for the Automation Exercise web application using Cypress.
 
-PREREQUISITES
+## PREREQUISITES
 Before using this project, ensure you have installed:
 
-Node.js 20 (Download from https://nodejs.org/)
+- [Node.js 20](https://nodejs.org/)
+- npm (comes with Node.js)
+- Git (optional, for cloning the repository)
 
-npm (comes with Node.js)
+## INSTALLATION & SETUP
 
-Git (optional, for cloning)
+Clone the repository and install dependencies:
 
-INSTALLATION & SETUP
+- git clone https://github.com/harisgenjac/cypress-e2e-tests.git
+- cd cypress-e2e-tests
+- npm install
 
-Clone the repository:
-git clone https://github.com/harisgenjac/cypress-e2e-tests.git
-cd cypress-e2e-tests
+## RUN TESTS:
 
-Install dependencies:
-npm install
+1. For headless mode:
+- npx cypress run
 
-Run tests:
+2. For interactive mode (GUI):
+- npx cypress open
 
-For headless mode:
-npx cypress run
-
-For interactive mode (GUI):
-npx cypress open
-
-PROJECT STRUCTURE
+## PROJECT STRUCTURE
+```
 cypress/
 e2e/ - Test files
 files/ - Test data
 fixtures/ - Test data
 page-objects/ - Page object model classes
 support/ - Custom commands
-
-AUTHOR
+```
+## AUTHOR
 Haris Genjac
 GitHub Profile: https://github.com/harisgenjac
 
-NOTE
+## NOTE
 This is an educational project and not affiliated with the official Automation Exercise website.
